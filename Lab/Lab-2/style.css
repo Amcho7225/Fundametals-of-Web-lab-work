@@ -1,0 +1,37 @@
+body, html{
+    background-color: #85AFD4;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    text-align: center;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p, a {
+    font-weight: normal;
+}
+
+button{
+    background-color: #E47272;
+    color:white;
+    border-radius: 20px;
+    padding:10px 20px;
+
+}
+
+a{
+    font-weight: bold;
+}
+
+table{
+    border: 2px solid white;
+}
+td, th {
+    padding: 10px;
+}
+
