@@ -1,0 +1,90 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: aqua;
+    border: 0;
+    margin: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+
+.banner-img{
+    width: 100%;
+}
+.main-heading{
+    position: absolute;
+    color: white;
+    margin-top: 15rem;
+    margin-left: 20%;
+    font-size: 7rem;
+    opacity: 0.7;
+}
+
+.main-nav{
+    position: relative;
+}
+.nav-ul{
+    display: flex;
+    margin-left:7rem;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    list-style: none;
+
+}
+
+.nav-ul li{
+    margin-right: 1rem;
+    color: gray;
+}
+
+.nav-ul li a{
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Main content styles */
+
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#gallery {
+    text-align: center;
+}
+
+/* Custom styles for the gallery */
+#gallery {
+    text-align: center;
+}
+
+.carousel-item img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 1000px;
+    margin: 0 auto;
+}
+/* Custom styles for the contact form */
+.contact-btn{
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
