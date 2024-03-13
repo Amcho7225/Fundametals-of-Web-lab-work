@@ -34,4 +34,7 @@ table{
 td, th {
     padding: 10px;
 }
+input{
+    margin: 5px;
+}
 
