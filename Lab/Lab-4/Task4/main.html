@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab-4-Task4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+      .gradient-border {
+        border: 1px solid;
+        border-image-slice: 1;
+        border-radius: 10px;
+        border-width: 1rem;
+        border-image-source: linear-gradient(90deg, rgb(60, 57, 107) 0%, rgb(114, 85, 194) 35%, rgb(137, 72, 206) 100%);
+      }
+    </style>
+  </head>
+  <body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container col-8">
+      <div class="gradient-border p-5" style="height: 40rem">
+        <div class="row h-100">
+          <div class="col-6 my-auto mx-auto">
+            <div class="mx-auto bg-black bg-opacity-10 d-flex justify-content-center align-items-center p-5" style="width: 50%; border-radius: 50%; height: 250px">
+              <div class="d-flex bg-dark bg-opacity-75 align-items-center justify-content-center rounded-1" style="width: 100px; height: 100px; border: 3px solid black"><i class="bi bi-person display-2"></i></div>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center align-items-center h-100">
+            <form class="col-8 text-center">
+              <h3>Member login</h3>
+              <div class="input-group fw-medium mt-3">
+                <span class="input-group-text border-top-0 border-start-0 border-end-0 rounded-start-5"><i class="bi bi-file-lock"></i></span>
+                <input type="password" class="form-control bg-body-tertiary fw-medium border-top-0 border-start-0 border-end-0 rounded-end-5" id="exampleInputPassword1" placeholder="Password" />
+              </div>
+              <div class="input-group fw-medium mt-3">
+                <span class="input-group-text border-top-0 border-start-0 border-end-0 rounded-start-5"><i class="bi bi-envelope-fill"></i></span>
+                <input type="email" class="form-control bg-body-tertiary fw-medium border-top-0 border-start-0 border-end-0 rounded-end-5" id="exampleFormControlInput1" placeholder="Email" />
+              </div>
+              <button type="button" class="btn btn-success w-100 mt-4 text-uppercase rounded-5">login</button>
+              <small>Forget username/passwort</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
