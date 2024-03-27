@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table Lab 5</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        cursor: pointer;
+      }
+
+      tr:hover {
+        background-color: #f2f2f2;
+      }
+
+      .asc::after {
+        content: " ▲";
+      }
+
+      .desc::after {
+        content: " ▼";
+      }
+    </style>
+  </head>
+  <body>
+    <button id="clickButton">Click</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th data-sort="id">ID</th>
+          <th data-sort="name">Name</th>
+          <th data-sort="country">Country</th>
+          <th data-sort="email">Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userData = [
+          { id: 1, name: "John Doe", country: "USA", email: "john@example.com" },
+          { id: 2, name: "Alice Smith", country: "Canada", email: "alice@example.com" },
+          { id: 3, name: "Bob Johnson", country: "UK", email: "bob@example.com" },
+        ];
+
+        let sortOrder = {};
+
+        function createRow(user) {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+      <td>${user.id}</td>
+      <td>${user.name}</td>
+      <td>${user.country}</td>
+      <td>${user.email}</td>
+      <td><button class="actionBtn">Click</button></td>
+    `;
+          return row;
+        }
+
+        function renderTable(data) {
+          const tableBody = document.getElementById("tableBody");
+          tableBody.innerHTML = "";
+          data.forEach((user) => {
+            tableBody.appendChild(createRow(user));
+          });
+        }
+
+        function sortData(key) {
+          const order = sortOrder[key] === "asc" ? 1 : -1;
+          sortOrder[key] = sortOrder[key] === "asc" ? "desc" : "asc";
+
+          userData.sort((a, b) => {
+            const valueA = a[key];
+            const valueB = b[key];
+            if (valueA < valueB) return -1 * order;
+            if (valueA > valueB) return 1 * order;
+            return 0;
+          });
+
+          renderTable(userData);
+          updateSortIcons(key);
+        }
+
+        function updateSortIcons(key) {
+          const headers = document.querySelectorAll("th[data-sort]");
+          headers.forEach((header) => {
+            header.classList.remove("asc", "desc");
+          });
+          const currentHeader = document.querySelector(`th[data-sort="${key}"]`);
+          currentHeader.classList.add(sortOrder[key] === "asc" ? "asc" : "desc");
+        }
+
+        function showModal(name) {
+          const modal = document.getElementById("myModal");
+          const modalText = document.getElementById("modalText");
+          modalText.textContent = `You clicked on the user: ${name}`;
+          modal.style.display = "block";
+        }
+
+        document.getElementById("clickButton").addEventListener("click", function () {
+          showModal("");
+        });
+
+        document.getElementById("myModal").addEventListener("click", function (event) {
+          if (event.target.classList.contains("close")) {
+            document.getElementById("myModal").style.display = "none";
+          }
+        });
+
+        document.getElementById("userTable").addEventListener("click", function (event) {
+          if (event.target.classList.contains("actionBtn")) {
+            const name = event.target.closest("tr").querySelector("td:nth-child(2)").textContent;
+            showModal(name);
+          } else if (event.target.closest("th[data-sort]")) {
+            const key = event.target.closest("th").dataset.sort;
+            sortData(key);
+          }
+        });
+
+        renderTable(userData);
+      });
+    </script>
+  </body>
+</html>
