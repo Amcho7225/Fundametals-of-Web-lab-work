@@ -1,0 +1,18 @@
+@import "mixins";
+
+header {
+  flex-direction: column;
+  @include flexCenter;
+  height: 30rem;
+  background-image: url("/Project/images/rebirth-story-1-IZLd81x9l.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    width: 60%;
+    color: rgb(236, 226, 226); /*
+    margin-top: 15rem;
+    margin-left: 20%;*/
+    font-size: 5rem;
+  }
+}

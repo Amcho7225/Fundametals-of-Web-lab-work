@@ -6,23 +6,15 @@
     <title>Final Fantasy 7 Rebirth-Project</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="/scss/main.css" />-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="scss/main.css" />
   </head>
 
   <body>
-    <!--<nav class="main-nav">
-      <ul class="nav-ul">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#characters">Characters</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>-->
-    <nav class="container-fluid navbar navbar-expand-sm navbar">
-      <a class="navbar-brand m-0" href="#"><img class="image-fluid" style="width: auto; height: 60px" src="images/x564iqo95hd21.webp" alt="image" /></a>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark w-100">
+      <a class="navbar-brand" href="#"><img class="image-brand" src="images/brend2.webp" alt="image" /></a>
       <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,13 +29,14 @@
         </ul>
       </div>
     </nav>
+
     <header id="home">
       <h1>Final Fantasy 7 Rebirth</h1>
     </header>
 
     <section id="about">
       <div class="container">
-        <h2 class="my-4">About</h2>
+        <h2 class="my-4 text-center">About</h2>
         <div class="row">
           <div class="col-md-6">
             <p>Final Fantasy 7 Rebirth is a remake of the classic RPG game Final Fantasy 7. It features stunning graphics, revamped gameplay, and an expanded storyline.</p>
@@ -51,195 +44,263 @@
             <p>The game combines elements of fantasy, science fiction, and environmentalism, exploring themes of identity, friendship, and the consequences of unchecked capitalism.</p>
           </div>
           <div class="col-md-6">
-            <iframe class="justify-content: end; mx-5 " width="560" height="315" src="https://www.youtube.com/embed/ESADIKP28AE?si=kGRJBJZp4U8cCAMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="w-100 h-100 justify-content-center align-items-center" src="https://www.youtube.com/embed/ESADIKP28AE?si=kGRJBJZp4U8cCAMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 my-5">
             <h3>Interested in becoming a playtester?</h3>
             <p>Fill out the form below to express your interest and be notified of future playtesting opportunities:</p>
-            <form action="#">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" class="form-control" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Contat us</button>
           </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="#" class="w-100">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required />
+                  </div>
+                  <div class="mb-3 align-items-center">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End modal-->
       </div>
     </section>
 
     <section id="characters">
       <h2 class="my-5">Characters</h2>
-      <div class="section-characters">
-        <div class="character">
-          <div class="character-left"><img src="images\Cloud_Remake.webp" alt="Cloud Strife" /></div>
-          <div class="character-right">
-            <h3>Cloud Strife</h3>
-            <p class="character-description">An enigmatic former SOLDIER turned mercenary, Cloud Strife wields his iconic Buster Sword with unparalleled skill and determination. Amidst his mysterious past and inner turmoil, he rises as a reluctant hero, leading his allies in the battle against evil.</p>
+      <div class="container">
+        <div class="section-characters">
+          <div class="character">
+            <div class="character-left"><img src="images\Cloud_Remake.webp" alt="Cloud Strife" /></div>
+            <div class="character-right">
+              <h3>Cloud Strife</h3>
+              <p class="character-description">An enigmatic former SOLDIER turned mercenary, Cloud Strife wields his iconic Buster Sword with unparalleled skill and determination. Amidst his mysterious past and inner turmoil, he rises as a reluctant hero, leading his allies in the battle against evil.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="character">
-          <div class="character-left"><img src="images\Aerith_Remakefull.webp" alt="Aerith Gainsborough" /></div>
-          <div class="character-right">
-            <h3>Aerith Gainsborough</h3>
-            <p class="character-description">A gentle yet resilient flower seller with a mysterious connection to the planet, Aerith Gainsborough possesses a kind heart and unwavering courage. As a beacon of hope amidst chaos, she guides her friends with wisdom and grace, determined to thwart the plans of those who seek to harm the world.</p>
+          <div class="character">
+            <div class="character-left"><img src="images\Aerith_Remakefull.webp" alt="Aerith Gainsborough" /></div>
+            <div class="character-right">
+              <h3>Aerith Gainsborough</h3>
+              <p class="character-description">A gentle yet resilient flower seller with a mysterious connection to the planet, Aerith Gainsborough possesses a kind heart and unwavering courage. As a beacon of hope amidst chaos, she guides her friends with wisdom and grace, determined to thwart the plans of those who seek to harm the world.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="character">
-          <div class="character-left"><img src="images\Tifa_Lockhart_from_FFVII_Remake_promo_render.webp" alt="Tifa Lockhart" /></div>
-          <div class="character-right">
-            <h3>Tifa Lockhart</h3>
-            <p class="character-description">A resilient and compassionate martial artist, Tifa Lockhart stands as a pillar of strength among her companions. With her unwavering determination and formidable combat skills, she fights fiercely to protect her friends and the planet from the forces of darkness.</p>
+          <div class="character">
+            <div class="character-left"><img src="images\Tifa_Lockhart_from_FFVII_Remake_promo_render.webp" alt="Tifa Lockhart" /></div>
+            <div class="character-right">
+              <h3>Tifa Lockhart</h3>
+              <p class="character-description">A resilient and compassionate martial artist, Tifa Lockhart stands as a pillar of strength among her companions. With her unwavering determination and formidable combat skills, she fights fiercely to protect her friends and the planet from the forces of darkness.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="character">
-          <div class="character-left"><img src="images\Barret_Wallace_from_FFVII_Rebirth_promo_render.webp" alt="Barret Wallace" /></div>
-          <div class="character-right">
-            <h3>Barret Wallace</h3>
-            <p class="character-description">A passionate and outspoken leader, Barret Wallace commands respect with his imposing presence and powerful gun arm. Fueled by a deep sense of justice and a desire to protect the planet, he fights tirelessly alongside his allies in the struggle against oppression.</p>
+          <div class="character">
+            <div class="character-left"><img src="images\Barret_Wallace_from_FFVII_Rebirth_promo_render.webp" alt="Barret Wallace" /></div>
+            <div class="character-right">
+              <h3>Barret Wallace</h3>
+              <p class="character-description">A passionate and outspoken leader, Barret Wallace commands respect with his imposing presence and powerful gun arm. Fueled by a deep sense of justice and a desire to protect the planet, he fights tirelessly alongside his allies in the struggle against oppression.</p>
+            </div>
           </div>
         </div>
+      </div>
     </section>
 
     <section id="gallery">
       <h2 class="my-5">Gallery</h2>
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images\ffvii-rebirth-december-keyart-16x9-png-jpgcopy.webp" class="d-block w-100" alt="Screenshot 1" />
+      <div class="container-fluid px-5">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images\ffvii-rebirth-december-keyart-16x9-png-jpgcopy.webp" class="d-block w-100" alt="Screenshot 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="images\Final-Fantasy-VII-Rebirth-scaled.jpg" class="d-block w-100" alt="Screenshot 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="images\ffvii-rebirth-cait-sith-yuffie-scaled.jpg" class="d-block w-100" alt="Screenshot 3" />
+            </div>
+            <div class="carousel-item">
+              <img src="images\final-fantasy-rebirth-chocobo-riding.png" class="d-block w-100" alt="Screenshot 4" />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="images\Final-Fantasy-VII-Rebirth-scaled.jpg" class="d-block w-100" alt="Screenshot 2" />
-          </div>
-          <div class="carousel-item">
-            <img src="images\ffvii-rebirth-cait-sith-yuffie-scaled.jpg" class="d-block w-100" alt="Screenshot 3" />
-          </div>
-          <div class="carousel-item">
-            <img src="images\final-fantasy-rebirth-chocobo-riding.png" class="d-block w-100" alt="Screenshot 4" />
-          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </section>
 
-    <!-- Somewhere around here I should add a section dedecated to offical game merchandise. But I think the easiest way of doing would be using Bootstrap -->
     <section id="merchandise">
       <h2 class="text-center my-4">Merchandise</h2>
-      <div class="row mt-5 mb-5">
-        <div class="col-md-3 col-sm-6">
+      <div class="container-fluid px-5">
+        <div class="row mt-5 mb-5">
+          <div class="col-md-3 col-sm-6">
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="/Project/product1.html" class="image">
-                        <img src="images/11e58dcd384858dca4012e5e1908b595_1920_KR__80906.jpg">
-                    </a>
-                    <a href="" class="add-to-cart">More</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="/Project/product1.html">FINAL FANTASY VII REMAKE T-SHIRT THE LEGEND BECOMES REAL</a></h3>
-                    <div class="price">$24.99</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img src="images/d866fb93d9770dc709505a91d1e7a3e5_1920_KR__62357.jpg">
-                    </a>
-
-                    <a href="" class="add-to-cart">More</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">FINAL FANTASY VII REMAKE DIGITAL CLOCK - BUSTER SWORD</a></h3>
-                    <div class="price">$199.99</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="product-grid">
               <div class="product-image">
-                  <a href="#" class="image">
-                      <img src="images/FF7_AC_CAITSITH_bg04__44769.jpg">
-                  </a>
-
-                  <a href="" class="add-to-cart">More</a>
+                <a href="/Project/product1.html" class="image">
+                  <img src="images/11e58dcd384858dca4012e5e1908b595_1920_KR__80906.jpg" />
+                </a>
+                <a href="" class="add-to-cart">More</a>
               </div>
               <div class="product-content">
-                  <h3 class="title"><a href="#">FINAL FANTASY VII ACTION DOLL CAIT SITH LIMITED EDITION</a></h3>
-                  <div class="price">$69.99</div>
+                <h3 class="title"><a href="/Project/product1.html">FINAL FANTASY VII REMAKE T-SHIRT THE LEGEND BECOMES REAL</a></h3>
+                <div class="price">$24.99</div>
               </div>
+            </div>
           </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-            <div class="product-image">
+          <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+              <div class="product-image">
                 <a href="#" class="image">
-                    <img src="images/FF7Music_Box-Main_Theme_of_FINAL_FANTASY_VII__44842.jpg">
+                  <img src="images/d866fb93d9770dc709505a91d1e7a3e5_1920_KR__62357.jpg" alt="d866fb93d9770dc709505a91d1e7a3e5_1920_KR__62357.jpg" />
                 </a>
 
                 <a href="" class="add-to-cart">More</a>
+              </div>
+              <div class="product-content">
+                <h3 class="title"><a href="#">FINAL FANTASY VII REMAKE DIGITAL CLOCK - BUSTER SWORD</a></h3>
+                <div class="price">$199.99</div>
+              </div>
             </div>
-            <div class="product-content">
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+              <div class="product-image">
+                <a href="#" class="image">
+                  <img src="images/FF7_AC_CAITSITH_bg04__44769.jpg" />
+                </a>
+
+                <a href="" class="add-to-cart">More</a>
+              </div>
+              <div class="product-content">
+                <h3 class="title"><a href="#">FINAL FANTASY VII ACTION DOLL CAIT SITH LIMITED EDITION</a></h3>
+                <div class="price">$69.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+              <div class="product-image">
+                <a href="#" class="image">
+                  <img src="images/FF7Music_Box-Main_Theme_of_FINAL_FANTASY_VII__44842.jpg" />
+                </a>
+
+                <a href="" class="add-to-cart">More</a>
+              </div>
+              <div class="product-content">
                 <h3 class="title"><a href="#">Final Fantasy VII Music Box: Main Theme Of Final Fantasy VII</a></h3>
                 <div class="price">$21.99</div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
+      </div>
+    </section>
     <section id="contact" class="w-100 d-flex justify-content-center align-items-center flex-column">
-      <div class="contact-info text-center my-5">
+      <div class="container contact-info text-center my-5">
         <h2>Contact</h2>
         <p>Feel free to reach out to us with any questions or inquiries. We'll get back to you as soon as possible.</p>
       </div>
-      <div class="container ">
-        <div class="row d-flex">
-          <div class="col-6">        
-            <form id="contact-form" class="d-flex justify-content-center align-items-center flex-column">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
+
+      <div class="container row d-flex">
+        <div class="col-md-6">
+          <form id="contact-form" class="d-flex justify-content-start align-items-center flex-column">
+            <div class="mb-3 d-flex align-items-center w-75">
+              <label for="exampleFormControlInput1" class="form-label m-3">Name </label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" required />
             </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+            <div class="mb-3 d-flex align-items-center w-75">
+              <label for="exampleFormControlInput1" class="form-label m-3">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email" required />
             </div>
-            <div class="form-group d-flex align-items-center">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" required></textarea>
+            <div class="mb-3 d-flex align-items-center w-75">
+              <label for="exampleFormControlTextarea1" class="form-label m-3">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
           </form>
-          
         </div>
-        <div class="col-6"><img src="images/6276d2ae-63cd-43d8-b5b9-d642ff1e9a80_1280x720.jpg" alt="Final Fantasy 7 Rebirth Cover" class="img-fluid" />
-        </div>
-
-        
-      </div>
+        <div class="col-md-6 d-flex"><img src="images/6276d2ae-63cd-43d8-b5b9-d642ff1e9a80_1280x720.jpg" alt="Final Fantasy 7 Rebirth Cover" class="img-fluid" /></div>
       </div>
     </section>
 
-  </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Final Fantasy 7 Rebirth</p>
+    <footer class="footer mt-5">
+      <div class="container">
+        <div>
+          <div class="row flex-column text-center">
+            <div class="mb-4">
+              <a class="navbar-brand" href="#"><img class="image-brand" src="images/brend2.webp" alt="image" /></a>
+            </div>
+            <ul class="list-unstyled d-flex align-items-center justify-content-center">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#characters">Characters</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#merchandise">Merchandise</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social mb-4">
+              <h3>Stay in touch</h3>
+              <ul class="list-unstyled d-flex align-items-center justify-content-center">
+                <li class="in">
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg></a>
+                </li>
+                <li class="fb">
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg></a>
+                </li>
+                <li class="tw">
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg></a>
+                </li>
+                <li class="pin">
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg></span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p class="mb-0"><small>© Colorlib. All Rights Reserved.</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

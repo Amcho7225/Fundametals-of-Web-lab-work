@@ -1,0 +1,18 @@
+@import "variables";
+/*contact form
+.contact-btn {
+  color: white;
+  background-color: $bgGridProduct;
+  border-radius: 5px;
+  /*@include colorHover;}
+  @include flexStart;*/
+.btn-primary {
+  color: $white;
+  background-color: $bgContactButton;
+  border-color: #133858;
+}
+.btn-primary:hover {
+  color: $white;
+  background-color: $bgHoverContactButton;
+  border-color: #285e8e;
+}

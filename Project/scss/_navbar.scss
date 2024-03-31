@@ -1,0 +1,35 @@
+@import "variables";
+.navbar a {
+  margin: 0.5rem;
+  .image-brand {
+    width: 100px;
+    height: 60px;
+  }
+}
+.navbar-nav li {
+  margin: 0.5rem;
+}
+.navbar-nav li:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.navbar-nav li:hover:after {
+  width: 100%;
+  background: #ffffff;
+}
+
+.navbar-nav li a {
+  color: $white;
+  text-decoration: none;
+  /*@include colorHover;*/
+}
+.navbar {
+  background-color: $bg-nav;
+  color: $white;
+}

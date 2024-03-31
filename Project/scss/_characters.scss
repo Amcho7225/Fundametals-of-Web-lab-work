@@ -1,0 +1,41 @@
+@import "mixins";
+#characters {
+  margin: 2.5rem 3rem;
+  text-align: center;
+}
+.section-characters {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  .character {
+    @include flexStart;
+    .character-left {
+      width: 50%;
+      height: auto;
+    }
+    .character-left {
+      width: 50%;
+    }
+    .character-right {
+      text-align: left;
+      width: 50%;
+      @include flexStart;
+      flex-direction: column;
+    }
+    @media (max-width: 576px) {
+      .character-right {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .character {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
+}

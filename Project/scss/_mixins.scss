@@ -1,0 +1,23 @@
+@import "variables";
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin colorHover {
+  transition: ease-in-out 0.3s;
+  &:hover {
+    color: $hoverText;
+  }
+}

@@ -1,7 +1,10 @@
 @import "variables";
-body {
-  background-color: red;
-  h1 {
-    color: $yelow;
-  }
-}
+@import "mixins";
+@import "base";
+@import "navbar";
+@import "header";
+@import "characters";
+@import "gallery";
+@import "contact";
+@import "footer";
+@import "products";

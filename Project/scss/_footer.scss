@@ -1,0 +1,33 @@
+@import "variables";
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  .image-brand {
+    width: 150px;
+    height: 100px;
+  }
+  li {
+    margin-right: 1.5rem;
+  }
+  li a {
+    color: $white;
+    .bi-instagram {
+      color: $white;
+      fill: rgb(231, 41, 27);
+    }
+    .bi-facebook {
+      color: $white;
+      fill: rgb(27, 98, 231);
+    }
+    .bi-pinterest {
+      color: $white;
+      fill: red;
+    }
+    .bi-twitter {
+      color: $white;
+      fill: rgb(27, 173, 231);
+    }
+  }
+}
