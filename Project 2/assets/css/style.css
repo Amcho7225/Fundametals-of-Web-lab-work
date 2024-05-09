@@ -1554,3 +1554,19 @@
   }
 }
 /* dark mode */
+
+/* 
+// TRYING TO ADD SHOW MORE FUNCTIONALITY */
+.read-more-text {
+  display: none !important;
+}
+
+.read-more-btn {
+  color: #00ff00;
+  cursor: pointer;
+}
+
+.read-more-text--show {
+  display: inline !important;
+}
+/* // TRYING TO ADD SHOW MORE FUNCTIONALITY */

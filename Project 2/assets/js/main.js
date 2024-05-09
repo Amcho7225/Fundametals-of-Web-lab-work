@@ -303,3 +303,41 @@ if (darkMode === "enabled") {
 }
 
 //Dark mode code!!!!!!!!!!!!!!!!!!!!!!!!
+
+// TRYING TO ADD SHOW MORE FUNCTIONALITY
+
+// const parentContainer = document.querySelector(".read-more-container")
+
+// parentContainer.addEventListener("click", event => {
+//   const current = event.target
+
+//   const isReadMoreBtn = current.classList.contains("read-more-btn")
+
+//   if (!isReadMoreBtn) return
+
+//   const currentText = event.target.parentNode.querySelector(".read-more-text")
+
+//   currentText.classList.toggle("read-more-text--show")
+
+//   current.textContent = currentText.classList.contains("read-more-text--show") ? "Read Less..." : "Read More..."
+// })
+
+document.addEventListener("DOMContentLoaded", function () {
+  const parentContainers = document.querySelectorAll(".read-more-container")
+
+  parentContainers.forEach(parentContainer => {
+    parentContainer.addEventListener("click", event => {
+      const current = event.target
+
+      if (!current.classList.contains("read-more-btn")) return
+
+      const currentText = parentContainer.querySelector(".read-more-text")
+
+      currentText.classList.toggle("read-more-text--show")
+
+      current.textContent = currentText.classList.contains("read-more-text--show") ? "Read Less..." : "Read More..."
+    })
+  })
+})
+
+// TRYING TO ADD SHOW MORE FUNCTIONALITY
