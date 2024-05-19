@@ -1426,7 +1426,6 @@
   /*--------------------------------------------------------------
 # Dark mode switch CSS
 --------------------------------------------------------------*/
-  /* Add a unique class or ID to isolate dark mode switch styles */
 
   #dark-mode-switch {
     position: relative;
@@ -1488,12 +1487,10 @@
 
   /* Example of updating other elements */
   body.dark-mode .counts {
-    /* Update styles for elements with class "element-class" */
     background-color: #333;
   }
 
   body.dark-mode .count-box {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
   }
 
@@ -1501,12 +1498,10 @@
     background-color: #333;
   }
   body.dark-mode .icon-box {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
     color: #fff;
   }
   body.dark-mode .icon-box a {
-    /* Update styles for elements with class "element-class" */
     color: #003300;
   }
   body.dark-mode #testimonials {
@@ -1514,17 +1509,14 @@
   }
 
   body.dark-mode .testimonial-item {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
   }
 
   body.dark-mode .testimonial-item h3 {
-    /* Update styles for elements with class "element-class" */
     color: #fff;
   }
 
   body.dark-mode .member {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
   }
 
@@ -1532,25 +1524,39 @@
     background-color: #333;
   }
   body.dark-mode .info-wrap {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
     color: #fff;
   }
   body.dark-mode .info-wrap p {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
     color: #fff;
   }
   body.dark-mode .info-wrap h4 {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
     color: #fff;
   }
 
   body.dark-mode .php-email-form {
-    /* Update styles for elements with class "element-class" */
     background-color: #222;
     color: #fff;
+  }
+
+  body.dark-mode .accordion-faq {
+    background-color: #222;
+    color: #fff;
+  }
+
+  body.dark-mode .accordion-faq:hover {
+    color: #00ff00;
+    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+  }
+
+  /* body.dark-mode .panel {
+    background-color: #004400;
+  } */
+
+  body.dark-mode .panel p {
+    font-weight: bold;
   }
 }
 /* dark mode */
@@ -1570,3 +1576,68 @@
   display: inline !important;
 }
 /* // TRYING TO ADD SHOW MORE FUNCTIONALITY */
+
+/* // FAQ */
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+}
+
+.faq-section-title {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.accordion-faq {
+  background-color: #fff;
+  color: #444444;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion-faq i {
+  font-size: 1.6rem;
+}
+
+.faq-section .active,
+.accordion-faq:hover {
+  color: #00ff00;
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+}
+.panel {
+  padding: 2rem 2.5rem 2rem;
+  background-color: #fff;
+  overflow: hidden;
+  background-color: #f1f7f5;
+  display: none;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+.faq .active {
+  border: none;
+}
+
+.accordion-faq.active:hover {
+  color: inherit;
+  box-shadow: none;
+}
+
+/* //  END OF FAQ */
