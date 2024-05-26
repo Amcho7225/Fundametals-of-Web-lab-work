@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View More</title>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <style>
+      /* Styles specific to view_more.html */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: #009688;
+      }
+
+      h3 {
+        color: #795548;
+      }
+
+      #video_container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Experience of one of our famus vault dwellers</h1>
+    <h3>American television host and comedian</h3>
+    <div id="selected_data"></div>
+    <h3>Video</h3>
+    <div id="video_container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Read data from localStorage and display it
+        var storedData = JSON.parse(localStorage.getItem("selectedData"));
+        if (storedData) {
+          // Display selected data
+          var selectedDataHtml = "<p>Name: " + storedData.name + "</p><p>Age: " + storedData.age + "</p>";
+          $("#selected_data").html(selectedDataHtml);
+        }
+
+        var videoEmbedCode =
+          '<iframe width="560" height="315" src="https://www.youtube.com/embed/tx8_pI3utlk?si=nJo_DIiOOQ_M4l-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+        $("#video_container").html(videoEmbedCode);
+      });
+    </script>
+  </body>
+</html>

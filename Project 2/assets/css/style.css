@@ -1551,6 +1551,10 @@
     box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
   }
 
+  body.dark-mode .tip {
+    border: 5px solid #222;
+  }
+
   /* body.dark-mode .panel {
     background-color: #004400;
   } */
@@ -1641,3 +1645,145 @@
 }
 
 /* //  END OF FAQ */
+
+/* JSON AJAX DATA LOAD SUVIVAL TIPS */
+
+#survival-tips-container {
+  max-width: 75%;
+  margin: auto;
+  padding-bottom: 3%;
+}
+
+/* Style for the edit box */
+.tip input[type="text"],
+.tip textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.tip button#save-btn {
+  margin-top: 10px;
+}
+
+.tip {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.tip:hover {
+  color: #00ff00;
+  box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.08);
+}
+
+.tip button.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tip button.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.tip button#save-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tip button.edit-btn:hover {
+  background-color: #004400;
+}
+
+.tip button.delete-btn:hover {
+  background-color: #75201a;
+}
+
+.tip button#save-btn:hover {
+  background-color: #004400;
+}
+
+/* Error Nodification style */
+
+.toast-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+}
+
+.toast-error img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.toast-error .toast-message {
+  color: black;
+  font-size: 16px;
+}
+
+/* WEATHER API STYLE  */
+
+.weather-container {
+  padding-top: 5%;
+}
+
+/* View more btn style*/
+#view_more {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#view_more_button {
+  background: #00ff00;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-top: 2%;
+}
+
+#view_more_button:hover {
+  color: #fff;
+  background-color: #004400;
+}
+
+#logoutButton {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #00ff00;
+  text-transform: uppercase;
+  border: none;
+  margin-left: 3%;
+}
+
+#logoutButton:hover {
+  background-color: #004400;
+}

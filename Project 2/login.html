@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <!-- Favicons -->
+    <link href="assets/general_images/VaultBoyFO3.webp" rel="icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <h1>Login</h1>
+          <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <br />
+            <button class="login-btn" type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+        <div class="card-image">
+          <img src="assets/general_images/VaultBoyFO3.webp" alt="Login Image" />
+        </div>
+      </div>
+    </div>
+    <script src="services/user-service.js"></script>
+  </body>
+</html>

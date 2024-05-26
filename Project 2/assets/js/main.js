@@ -358,3 +358,317 @@ for (let i = 0; i < acc.length; i++) {
   })
 }
 // END OF FAQ JS//
+
+// FORM VALIDATION CODE //
+
+// $(document).ready(function () {
+//   // Initialize the jQuery Validation plugin
+//   $("#contact-form").validate({
+//     rules: {
+//       name: "required",
+//       email: {
+//         required: true,
+//         email: true,
+//       },
+//       subject: "required",
+//       message: "required",
+//       date: "required",
+//       password: {
+//         required: true,
+//         minlength: 8, // Example password criteria (minimum length)
+//       },
+//     },
+//     messages: {
+//       name: "Please enter your name",
+//       email: {
+//         required: "Please enter your email",
+//         email: "Please enter a valid email address",
+//       },
+//       subject: "Please enter a subject",
+//       message: "Please enter a message",
+//       date: "Please select a date",
+//       password: {
+//         required: "Please enter a password",
+//         minlength: "Password must be at least 8 characters long",
+//       },
+//     },
+//     submitHandler: function (form) {
+//       // Your form submission logic here
+//       form.submit();
+//     },
+//   });
+
+//   // Datepicker initialization (if you're using a date picker library)
+//   $(".datepicker").datepicker();
+
+//   // Password strength indicator (if you're using a library or custom code)
+//   $("#password").on("input", function () {
+//     // Your password strength indicator logic here
+//   });
+// });
+
+// Initialize flatpickr
+flatpickr(".datepicker", {
+  dateFormat: "Y-m-d"
+})
+
+// Form validation and submission
+$("#contact-form").validate({
+  rules: {
+    name: "required",
+    email: {
+      required: true,
+      email: true
+    },
+    subject: "required",
+    message: "required",
+    date: "required",
+    password: {
+      required: true,
+      minlength: 12
+    }
+  },
+  messages: {
+    name: "Please enter your name",
+    email: {
+      required: "Please enter your email",
+      email: "Please enter a valid email address"
+    },
+    subject: "Please enter a subject",
+    message: "Please enter a message",
+    date: "Please enter a date",
+    password: {
+      required: "Please enter a password",
+      minlength: "Password must be at least 12 characters long"
+    }
+  },
+  submitHandler: function (form) {
+    // Simulate an error response for demonstration purposes
+    var simulateError = true
+
+    // Simulate form submission success or error
+    if (simulateError) {
+      toastr.error('<img src="assets/img/Error.png" alt="Error"> Oooops Error', "Error")
+    } else {
+      toastr.success("Form submitted successfully!")
+    }
+
+    // Prevent the default form submission
+    return false
+  }
+})
+
+// Password strength indicator
+var passwordField = document.getElementById("password")
+var strengthIndicator = document.getElementById("password-strength-indicator")
+
+passwordField.addEventListener("input", function () {
+  var password = this.value
+  var strength = 0
+
+  // Check for minimum length
+  if (password.length >= 8) {
+    strength += 1
+  }
+
+  // Check for uppercase letters
+  if (/[A-Z]/.test(password)) {
+    strength += 1
+  }
+
+  // Check for lowercase letters
+  if (/[a-z]/.test(password)) {
+    strength += 1
+  }
+
+  // Check for numbers
+  if (/[0-9]/.test(password)) {
+    strength += 1
+  }
+
+  // Check for special characters
+  if (/[^A-Za-z0-9]/.test(password)) {
+    strength += 1
+  }
+
+  // Update the strength indicator
+  strengthIndicator.textContent = ""
+  strengthIndicator.classList.remove("weak", "medium", "strong")
+  if (strength === 0) {
+    strengthIndicator.textContent = ""
+  } else if (strength <= 2) {
+    strengthIndicator.classList.add("weak")
+    strengthIndicator.textContent = "Weak"
+  } else if (strength <= 4) {
+    strengthIndicator.classList.add("medium")
+    strengthIndicator.textContent = "Medium"
+  } else {
+    strengthIndicator.classList.add("strong")
+    strengthIndicator.textContent = "Strong"
+  }
+})
+/// Function to fetch survival tips data and display them
+function fetchAndDisplaySurvivalTips() {
+  // Fetch survival tips data from JSON file
+  fetch("survival-tips.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch survival tips data")
+      }
+      return response.json()
+    })
+    .then(survivalTips => {
+      const container = document.getElementById("survival-tips-container")
+
+      container.innerHTML = ""
+
+      // Loop through each survival tip and append it to the container
+      survivalTips.forEach(tip => {
+        const tipElement = createTipElement(tip)
+        container.appendChild(tipElement)
+      })
+
+      // Add event listeners for edit and delete buttons using event delegation
+      container.addEventListener("click", event => {
+        const target = event.target
+        if (target.classList.contains("edit-btn")) {
+          // Handle edit button click
+          const tipId = parseInt(target.getAttribute("data-id"))
+          const tipToEdit = survivalTips.find(tip => tip.id === tipId)
+          editTip(tipToEdit)
+        } else if (target.classList.contains("delete-btn")) {
+          // Handle delete button click
+          const tipId = parseInt(target.getAttribute("data-id"))
+          const indexToDelete = survivalTips.findIndex(tip => tip.id === tipId)
+          if (indexToDelete !== -1) {
+            survivalTips.splice(indexToDelete, 1)
+            container.removeChild(target.parentElement)
+          }
+        }
+      })
+    })
+    .catch(error => {
+      console.error("Error fetching survival tips data:", error)
+    })
+}
+
+// Function to create a div element for a survival tip
+function createTipElement(tip) {
+  const tipElement = document.createElement("div")
+  tipElement.classList.add("tip")
+  tipElement.dataset.id = tip.id
+  tipElement.innerHTML = `
+    <h2>${tip.title}</h2>
+    <p>${tip.content}</p>
+    <button class="edit-btn" data-id="${tip.id}">Edit</button>
+    <button class="delete-btn" data-id="${tip.id}">Delete</button>
+  `
+  return tipElement
+}
+
+// Function to handle editing a survival tip
+function editTip(tip) {
+  // Display input fields populated with existing data for editing
+  const tipElement = document.querySelector(`.tip[data-id="${tip.id}"]`)
+  if (tipElement) {
+    tipElement.innerHTML = `
+      <input type="text" id="edit-title" value="${tip.title}">
+      <textarea id="edit-content">${tip.content}</textarea>
+      <button id="save-btn" data-id="${tip.id}">Save</button>
+    `
+
+    document.getElementById("save-btn").addEventListener("click", () => {
+      // Update tip with edited values
+      tip.title = document.getElementById("edit-title").value
+      tip.content = document.getElementById("edit-content").value
+
+      // Update display
+      tipElement.innerHTML = `
+        <h2>${tip.title}</h2>
+        <p>${tip.content}</p>
+        <button class="edit-btn" data-id="${tip.id}">Edit</button>
+        <button class="delete-btn" data-id="${tip.id}">Delete</button>
+      `
+    })
+  }
+}
+
+document.addEventListener("DOMContentLoaded", fetchAndDisplaySurvivalTips)
+
+//  OPEN WEATHER API INTERGRATION
+
+// Function to fetch weather data from OpenWeatherMap API
+function fetchWeatherData(latitude, longitude, apiKey) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
+      return response.json()
+    })
+    .then(data => {
+      updateWeatherDisplay(data)
+    })
+    .catch(error => {
+      console.error("There was a problem with the fetch operation:", error)
+    })
+}
+
+// Function to update HTML elements with weather data
+function updateWeatherDisplay(weatherData) {
+  const temperatureElement = document.getElementById("temperature")
+  const conditionElement = document.getElementById("condition")
+
+  // Convert temperature from Kelvin to Celsius
+  const temperatureCelsius = weatherData.main.temp - 273.15
+
+  const additionalDescription = "This is the current temperature in Celsius:"
+
+  temperatureElement.textContent = `${additionalDescription} ${temperatureCelsius.toFixed(2)}°C`
+  conditionElement.textContent = weatherData.weather[0].description
+}
+
+const latitude = 36.778259
+const longitude = -119.417931
+const apiKey = "f85337035b7f0a84fcdd0d4dd93529a2"
+
+fetchWeatherData(latitude, longitude, apiKey)
+
+// Custom.js
+$(document).ready(function () {
+  // Define a route to handle navigation to the #view_more section
+  $('a[href="#view_more"]').on("click", function (event) {
+    event.preventDefault()
+    $("html, body").animate(
+      {
+        scrollTop: $("#view_more").offset().top
+      },
+      800
+    )
+  })
+})
+
+$(document).ready(function () {
+  // When the view more button is clicked
+  $("#view_more_button").on("click", function () {
+    var selectedData = {
+      name: "Conan O'Brien",
+      age: 61
+    }
+
+    localStorage.setItem("selectedData", JSON.stringify(selectedData))
+
+    window.location.href = "view_more.html"
+  })
+})
+
+// Log out button
+
+$(document).ready(function () {
+  $("#logoutButton").click(function () {
+    localStorage.removeItem("loggedInUser")
+    window.location.href = "login.html"
+  })
+})
