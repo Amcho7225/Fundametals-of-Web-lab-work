@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Information</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var ipAddress = "92.36.204.230";
+
+        $.ajax({
+          url: "https://ipapi.co/" + ipAddress + "/json/",
+          dataType: "json",
+          success: function (data) {
+            constructTable(data);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching IP information:", error);
+          },
+        });
+
+        function constructTable(data) {
+          var table = $("<table>").addClass("ip-info-table");
+
+          $.each(data, function (key, value) {
+            var row = $("<tr>");
+            row.append($("<td>").text(key));
+            row.append($("<td>").text(value));
+            table.append(row);
+          });
+
+          $("#ipInfoContainer").empty().append(table);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="ipInfoContainer"></div>
+  </body>
+</html>

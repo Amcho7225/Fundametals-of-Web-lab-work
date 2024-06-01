@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Finding Clean Water",
+    "category": "Survival Tips",
+    "content": "In the post-apocalyptic wasteland, finding clean water is crucial for survival. Look for natural water sources such as rivers or streams, and consider investing in a water purification system if possible. Boiling water can also help kill bacteria and make it safe to drink."
+  },
+  {
+    "id": 2,
+    "title": "Building Shelter",
+    "category": "Survival Tips",
+    "content": "When exploring the wasteland, having shelter is essential for protection against harsh weather conditions and potential threats. Look for sturdy structures such as abandoned buildings or caves, and consider reinforcing them with additional materials like scrap metal or wood."
+  },
+  {
+    "id": 3,
+    "title": "Gathering Food",
+    "category": "Survival Tips",
+    "content": "Food may be scarce in the post-apocalyptic world, so learning how to gather and preserve food is crucial. Look for edible plants, hunt small game, and scavenge for canned goods and non-perishable items. Consider learning basic farming techniques to grow your own food."
+  }
+]
