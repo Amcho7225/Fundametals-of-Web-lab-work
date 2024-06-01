@@ -723,7 +723,7 @@
   }
 
   /*--------------------------------------------------------------
-# Portfolio
+/* Portfolio
 --------------------------------------------------------------*/
   .portfolio {
     padding: 60px 0;
@@ -774,6 +774,8 @@
     position: relative;
     height: 360px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .portfolio .portfolio-item figure {
@@ -825,39 +827,42 @@
   }
 
   .portfolio .portfolio-item figure .link-preview {
-    left: calc(50% - 38px);
+    left: calc(50% - 18px);
     top: calc(50% - 18px);
   }
 
   .portfolio .portfolio-item figure .link-details {
-    right: calc(50% - 38px);
+    right: calc(50% - 18px);
     top: calc(50% - 18px);
   }
 
   .portfolio .portfolio-item figure:hover .link-preview {
     opacity: 1;
-    left: calc(50% - 44px);
+    left: calc(50% - 22px);
   }
 
   .portfolio .portfolio-item figure:hover .link-details {
     opacity: 1;
-    right: calc(50% - 44px);
+    right: calc(50% - 22px);
   }
 
   .portfolio .portfolio-item .portfolio-info {
     background: #fff;
     text-align: center;
     padding: 30px;
-    height: 90px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 0 0 3px 3px;
   }
 
   .portfolio .portfolio-item .portfolio-info h4 {
-    font-size: 18px;
-    line-height: 1px;
+    font-size: 14px;
+    line-height: 1.4;
     font-weight: 700;
-    margin-bottom: 18px;
-    padding-bottom: 0;
+    margin-bottom: 10px;
+    word-wrap: break-word;
   }
 
   .portfolio .portfolio-item .portfolio-info h4 a {
@@ -873,8 +878,32 @@
     margin: 0;
     color: #b8b8b8;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio .portfolio-item {
+      height: auto;
+    }
+
+    .portfolio .portfolio-item figure {
+      height: auto;
+    }
+
+    .portfolio .portfolio-item .portfolio-info {
+      padding: 20px;
+    }
+
+    .portfolio .portfolio-item .portfolio-info h4 {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .portfolio .portfolio-item .portfolio-info p {
+      font-size: 10px;
+    }
   }
 
   /*--------------------------------------------------------------
@@ -1444,13 +1473,13 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
-    background-color: #ccc; /* default background color */
+    background-color: #ccc;
     border-radius: 20px;
     transition: background-color 0.3s ease;
   }
 
   #dark-mode-switch input:checked + label {
-    background-color: #333; /* background color when dark mode is enabled */
+    background-color: #333;
   }
 
   #dark-mode-switch label::after {
@@ -1460,7 +1489,7 @@
     left: 1px;
     width: 18px;
     height: 18px;
-    background-color: #fff; /* color of the button */
+    background-color: #fff;
     border-radius: 50%;
     transition: transform 0.3s ease;
   }
@@ -1476,13 +1505,13 @@
 
   /* Example of updating footer color */
   body.dark-mode #footer .footer-top {
-    background-color: #222; /* Darker background color for footer */
-    color: #ccc; /* Lighter text color for footer */
+    background-color: #222;
+    color: #ccc;
   }
 
   body.dark-mode #footer .social-links {
-    background-color: #222; /* Darker background color for footer */
-    color: #ccc; /* Lighter text color for footer */
+    background-color: #222;
+    color: #ccc;
   }
 
   /* Example of updating other elements */
@@ -1554,10 +1583,6 @@
   body.dark-mode .tip {
     border: 5px solid #222;
   }
-
-  /* body.dark-mode .panel {
-    background-color: #004400;
-  } */
 
   body.dark-mode .panel p {
     font-weight: bold;
@@ -1786,4 +1811,25 @@
 
 #logoutButton:hover {
   background-color: #004400;
+}
+
+@media (max-width: 768px) {
+  #logoutButton {
+    font-size: 12px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #logoutButton {
+    font-size: 11px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  #logoutButton {
+    font-size: 10px;
+    padding: 6px 16px;
+  }
 }

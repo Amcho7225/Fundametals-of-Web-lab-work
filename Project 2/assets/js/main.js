@@ -1,11 +1,3 @@
-/**
- * Template Name: Lumia
- * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
- * Updated: Mar 17 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
-
 ;(function () {
   "use strict"
 
@@ -166,26 +158,6 @@
     }
   })
 
-  // /**
-  //  * Skills animation
-  //  */
-  // let skilsContent = select('.skills-content');
-  // if (skilsContent) {
-  //   new Waypoint({
-  //     element: skilsContent,
-  //     offset: '80%',
-  //     handler: function(direction) {
-  //       let progress = select('.progress .progress-bar', true);
-  //       progress.forEach((el) => {
-  //         el.style.width = el.getAttribute('aria-valuenow') + '%'
-  //       });
-  //     }
-  //   })
-  // }
-
-  /**
-   * Porfolio isotope and filter
-   */
   window.addEventListener("load", () => {
     let portfolioContainer = select(".portfolio-container")
     if (portfolioContainer) {
@@ -306,22 +278,6 @@ if (darkMode === "enabled") {
 
 // TRYING TO ADD SHOW MORE FUNCTIONALITY
 
-// const parentContainer = document.querySelector(".read-more-container")
-
-// parentContainer.addEventListener("click", event => {
-//   const current = event.target
-
-//   const isReadMoreBtn = current.classList.contains("read-more-btn")
-
-//   if (!isReadMoreBtn) return
-
-//   const currentText = event.target.parentNode.querySelector(".read-more-text")
-
-//   currentText.classList.toggle("read-more-text--show")
-
-//   current.textContent = currentText.classList.contains("read-more-text--show") ? "Read Less..." : "Read More..."
-// })
-
 document.addEventListener("DOMContentLoaded", function () {
   const parentContainers = document.querySelectorAll(".read-more-container")
 
@@ -360,52 +316,6 @@ for (let i = 0; i < acc.length; i++) {
 // END OF FAQ JS//
 
 // FORM VALIDATION CODE //
-
-// $(document).ready(function () {
-//   // Initialize the jQuery Validation plugin
-//   $("#contact-form").validate({
-//     rules: {
-//       name: "required",
-//       email: {
-//         required: true,
-//         email: true,
-//       },
-//       subject: "required",
-//       message: "required",
-//       date: "required",
-//       password: {
-//         required: true,
-//         minlength: 8, // Example password criteria (minimum length)
-//       },
-//     },
-//     messages: {
-//       name: "Please enter your name",
-//       email: {
-//         required: "Please enter your email",
-//         email: "Please enter a valid email address",
-//       },
-//       subject: "Please enter a subject",
-//       message: "Please enter a message",
-//       date: "Please select a date",
-//       password: {
-//         required: "Please enter a password",
-//         minlength: "Password must be at least 8 characters long",
-//       },
-//     },
-//     submitHandler: function (form) {
-//       // Your form submission logic here
-//       form.submit();
-//     },
-//   });
-
-//   // Datepicker initialization (if you're using a date picker library)
-//   $(".datepicker").datepicker();
-
-//   // Password strength indicator (if you're using a library or custom code)
-//   $("#password").on("input", function () {
-//     // Your password strength indicator logic here
-//   });
-// });
 
 // Initialize flatpickr
 flatpickr(".datepicker", {
@@ -466,27 +376,22 @@ passwordField.addEventListener("input", function () {
   var password = this.value
   var strength = 0
 
-  // Check for minimum length
   if (password.length >= 8) {
     strength += 1
   }
 
-  // Check for uppercase letters
   if (/[A-Z]/.test(password)) {
     strength += 1
   }
 
-  // Check for lowercase letters
   if (/[a-z]/.test(password)) {
     strength += 1
   }
 
-  // Check for numbers
   if (/[0-9]/.test(password)) {
     strength += 1
   }
 
-  // Check for special characters
   if (/[^A-Za-z0-9]/.test(password)) {
     strength += 1
   }
@@ -636,7 +541,6 @@ const apiKey = "f85337035b7f0a84fcdd0d4dd93529a2"
 
 fetchWeatherData(latitude, longitude, apiKey)
 
-// Custom.js
 $(document).ready(function () {
   // Define a route to handle navigation to the #view_more section
   $('a[href="#view_more"]').on("click", function (event) {

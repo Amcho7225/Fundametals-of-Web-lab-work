@@ -6,33 +6,43 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
 .container {
   max-width: 600px;
+  width: 100%;
   margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .card-content {
   flex: 1;
-  padding: 40px;
-  background-color: #fff;
+  padding: 20px;
 }
 
 .card-content h1 {
   margin-top: 0;
+  font-size: 2rem;
+  color: #333;
 }
 
 .card-image {
-  width: 300px;
+  width: 100%;
   background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-image img {
@@ -53,10 +63,62 @@ body {
   background: #00ff00;
   text-transform: uppercase;
   border: none;
-  margin-left: 3%;
-  margin-top: 20px;
+  cursor: pointer;
 }
 
 .register-btn:hover {
   background-color: #004400;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #00ff00;
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-top: 20px;
+  color: #777;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card-content {
+    padding: 40px;
+  }
+
+  .card-image {
+    width: 300px;
+  }
 }
