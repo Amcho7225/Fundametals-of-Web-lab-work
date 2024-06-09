@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vault-Tec Corporation-Project-Amer Bidzevic</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/general_images/VaultBoyFO3.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Include CSS for Toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  
+  <!-- Include CSS for flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Jquery UI  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+  <!-- Include flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  
+  <!-- Toastr JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jQuery Validation Plugin  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+ <!-- Bootstrap -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">        <a href="index.html"><img src="assets\general_images\FO4_Vault-Tec_logo.webp" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Memorabilia</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#faq-section">Frequently asked questions</a></li>
+              <li class="dropdown"><a href="#"><span>Find even more</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#view_more_button">View More</a></li>
+                  <li><a href="#survival-tips-container">Survial Tips</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> 
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+      </nav><!-- .navbar -->
+
+
+      <div class="header-social-links d-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+      <button id="logoutButton">Logout</button>
+
+    </div>
+<!-- DARK MODE SWITCH -->
+
+  <div id="dark-mode-switch">
+    <input type="checkbox" id="dark-mode-toggle">
+    <label for="dark-mode-toggle"></label>
+  </div>
+
+<!-- DARK MODE SWITCH END  -->
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to <span>Vault-Tec</span></h1>
+      <h2>Securing humanity's future, one vault at a time.</h2>
+      <a href="#about" class="btn-get-started scrollto">Find out more</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= What We Do Section ======= -->
+    <section id="what-we-do" class="what-we-do">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>What We Do</h2>
+          <p>Vault-Tec: Shaping the Future of Humanity through Innovation and Preparedness.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Vault Construction & Management</a></h4>
+              <p>We specialize in constructing and managing state-of-the-art underground Vaults, ensuring humanity's safety in nuclear fallout.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Scientific Research & Innovation</a></h4>
+              <p>Pushing the boundaries of science with groundbreaking research in medicine, agriculture, and energy technology.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Community Development & Resource Allocation</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End What We Do Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/general_images/285969-20.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>About Us</h3>
+          <div class="read-more-container">
+            <p>
+              Vault-Tec Industries was a prominent pre-war corporation in the United States, renowned for its groundbreaking construction of Vaults, underground bunkers designed to safeguard inhabitants from the ravages of nuclear fallout. Established in the mid-21st century, Vault-Tec emerged as a pivotal player in the government's extensive preparations for the looming threat of nuclear conflict.
+
+              At the forefront of innovation, Vault-Tec revolutionized civil defense strategies with its state-of-the-art Vaults, employing cutting-edge technology and visionary engineering to create havens of safety and security amidst the chaos of global tension. As tensions escalated and the specter of nuclear war loomed ever closer, Vault-Tec's contributions became increasingly vital, ensuring the preservation of humanity's legacy in the face of impending catastrophe.
+              <span class="read-more-text">
+                Driven by a commitment to excellence and a steadfast dedication to the preservation of human life, Vault-Tec's mission extended far beyond mere construction. The company's holistic approach encompassed every aspect of Vault life, from meticulous planning and design to comprehensive resource management and community development. With a focus on sustainability, self-sufficiency, and resilience, Vault-Tec endeavored to not only protect lives but also nurture thriving societies capable of enduring the trials of a post-apocalyptic world.
+
+                Despite the uncertainties of the times, Vault-Tec remained unwavering in its pursuit of a brighter future for humanity. Through unwavering ingenuity, unwavering ingenuity, and unwavering resolve, Vault-Tec stood as a beacon of hope in a world overshadowed by fear and uncertainty. Today, the legacy of Vault-Tec endures as a testament to the indomitable spirit of human resilience and the enduring quest for survival in the face of adversity.
+              </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+          </div>
+
+          <div class="weather-container">
+            <h1>Weather In the Wasteland</h1>
+            <div id="weather-info">
+                <p>Temperature: <span id="temperature"></span></p>
+                <p>Condition: <span id="condition"></span></p>
+            </div>
+        </div>
+
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container mt-5">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="122" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Vaults Built</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Satisfaction percentage</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Years in business</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3456" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Volunteers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Explore Vault-Tec's innovative solutions for post-apocalyptic survival and community resilience.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="bi bi-briefcase"></i>
+              <h4><a href="#">Vault Construction</a></h4>
+              <p>We specialize in fostering cohesive and productive communities within our Vaults, ensuring that residents thrive through effective resource management and social programs.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <h4><a href="#">Scientific Research</a></h4>
+              <p>At Vault-Tec, we lead pioneering research initiatives, exploring new frontiers in medicine, agriculture, and technology to enhance the quality of life within our Vaults and beyond.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <h4><a href="#">Emergency Preparedness Training</a></h4>
+              <p>Through comprehensive training programs, we equip Vault dwellers with the skills and knowledge needed to respond effectively to emergencies and thrive in post-nuclear environments.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <h4><a href="#">Infrastructure Maintenance</a></h4>
+              <p>Our dedicated teams ensure the ongoing functionality and safety of Vault infrastructure, conducting regular maintenance and repairs to uphold operational efficiency.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <i class="bi bi-brightness-high"></i>
+              <h4><a href="#">Public Relations</a></h4>
+              <p>We maintain open communication channels with Vault residents, providing transparency about Vault-Tec initiatives and fostering a sense of community and trust among inhabitants.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <i class="bi bi-calendar4-week"></i>
+              <h4><a href="#">Community Management</a></h4>
+              <p>We specialize in fostering cohesive and productive communities within our Vaults, ensuring that residents thrive through effective resource management and social programs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Memorabilia</h2>
+          <p>Explore our collection of rare and iconic Fallout items.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Pip-boy Editions</li>
+              <li data-filter=".filter-card">Special Editions</li>
+              <li data-filter=".filter-web">Caps</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+        <div class="container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/s-l1600.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/s-l1600.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class=  "bx bx-plus"></i></a>
+               
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout 4 Vault Boy 111</a></h4>
+                <p>Fallout 4 Vault Boy 111 Bobble Head Series 1: Energy Weapons</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/s-l1600.png" class="img-fluid" alt="">
+                <a href="assets/general_images/s-l1600.png" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout Bottle Cap Series Nuka-Cola</a></h4>
+                <p>Fallout Bottle Cap Series Nuka-Cola Original with Collectible Tin</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/Mini-nuke.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/Mini-nuke.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout Game Mini Nuke Nuclear Bomb</a></h4>
+                <p>Fallout Game Mini Nuke Nuclear Bomb Desk Organizer Planter Collectible Rare</p>
+              </div>
+            </div>
+            
+        </div>
+        </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/F4-Spec.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/F4-Spec.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+          
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout 4 PIP-BOY Model 3000 IV </a></h4>
+                <p>Fallout 4 PIP-BOY Model 3000 IV With PC Game Book Poster Collectors Edition</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/Brotherhood.png" class="img-fluid" alt="">
+                <a href="assets/general_images/Brotherhood.png" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout Brotherhood of Steel Holotag </a></h4>
+                <p>Fallout Brotherhood of Steel Holotag Nuka Cola Caps Bullets Custom Stash Tin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/lucky.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/lucky.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="portfolio-details.html">Fallout Vault Boy 101 Bobble Head Series 3: Luck</a></h4>
+                <p>Fallout Vault Boy 101 Bobble Head Series 3: Luck</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/dweller.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/dweller.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout 4 Vault Dwellers Orientation Kit </a></h4>
+                <p>Fallout 4 Vault Dwellers Orientation Kit Collector's Edition Rare New XXL</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/f3-spec.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/f3-spec.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout 3: Collector's Edition (PC, 2008)</a></h4>
+                <p>Fallout 3: Collector's Edition (PC, 2008) - Game, Lunchbox, Bobblehead, DVD</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="assets/general_images/ORANGE-CAPS.jpg" class="img-fluid" alt="">
+                <a href="assets/general_images/ORANGE-CAPS.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a>Fallout Brotherhood of Steel Holotag</a></h4>
+                <p>Fallout Brotherhood of Steel Holotag Nuka Cola Caps Bullets Custom Stash Tin</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Discover the thoughts and experiences shared by those who have entrusted their safety and future to Vault-Tec.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Vault-Tec represented more than just shelter; it was a promise of a future beyond the devastation. As part of the team, I witnessed the resilience of humanity firsthand, as we banded together to rebuild society from the ground up. Our vaults were symbols of hope in a world consumed by chaos.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/general_images/VaultBoyFO3.webp" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Vault-Tec Historian</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Joining Vault-Tec was a journey into the unknown, but within our vaults, I found purpose. We weren't just survivors; we were pioneers, charting a course for humanity's rebirth. Each day brought new discoveries, new opportunities, and the promise of a brighter future.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/general_images/fallout-4-fallout-3-fallout-2-video-game-vindicate.jpg" class="testimonial-img" alt="">
+                <h3>Arthur Maxson</h3>
+                <h4>Vault-Tec Scientist</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  At Vault-Tec, I discovered a community unlike any other. Together, we faced the challenges of the wasteland, forging bonds that transcended hardship. Vault life wasn't just about surviving – it was about thriving, building a better tomorrow from the ashes of yesterday.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/general_images/fallout_vault_boy_by_darkmatteria_d8yebia-fullview.jpg" class="testimonial-img" alt="">
+                <h3>Nick Valentine</h3>
+                <h4>Vault-Tec Security Chief</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  As a member of Vault-Tec, I witnessed firsthand the transformation of underground shelters into thriving societies. Through innovation and resilience, we ensured that humanity's spirit endured against all odds. Our legacy isn't just survival – it's the triumph of the human spirit.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/general_images/gratis-png-fallout-3-fallout-pip-boy-la-boveda-de-fallout-new-vegas-fallout-4-graffiti-de-fallout-thumbnail.png" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Vault-Tec Investigator</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Vault-Tec wasn't just a corporation; it was a beacon of hope in a world consumed by chaos. As part of the team, I saw how our vaults became symbols of our collective strength and determination. Together, we built communities that stood as testaments to humanity's resilience.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/general_images/23-234525_fallout-retro-pencil-and-in-color-fallout-vault.png" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Team</h2>
+      <p>Meet the elite team of Vault-Tec professionals, experts in their fields, ready to guide humanity towards a better tomorrow.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="assets\general_images\hughes_special_collections-0321_0113.jpg" alt="">
+          <h4>Stanley Van Robb</h4>
+          <span>Founder and CEO</span>
+          <div class="read-more-container">
+            <p>
+              Stanley Van Robb was one of the founding members of Vault-Tec Industries. As the CEO, he played a pivotal role in shaping the company's vision and overseeing its operations. <span class="read-more-text">With a keen business acumen and a relentless drive for success, Van Robb was instrumental in Vault-Tec's rise to prominence as a leading provider of vault technology.
+            </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+          </div>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="assets\general_images\actor-robert-house-fallout-new-vegas-476092_large.jpg" alt="">
+          <h4>Robert House</h4>
+          <span>Strategic Advisor</span>
+          <div class="read-more-container">
+            <p>
+              Robert House was a brilliant entrepreneur and technologist who collaborated closely with Vault-Tec in the development of vault technology.<span class="read-more-text">While not directly involved in day-to-day operations, House provided strategic guidance and expertise to Vault-Tec's leadership, leveraging his vast resources and influence to advance the company's goals.
+            </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+          </div>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="assets\general_images\Wernher_von_Braun_1960.jpg" alt="">
+          <h4>T. Stanislaus Braun</h4>
+          <span>Chief Scientist</span>
+          <div class="read-more-container">
+            <p>
+              T. Stanislaus Braun was the enigmatic genius behind many of Vault-Tec's scientific breakthroughs. <span class="read-more-text">As the Chief Scientist, he led the company's research and development efforts, pioneering innovative solutions to the challenges of post-nuclear survival. Braun's unconventional methods and eccentric personality made him a controversial figure within Vault-Tec, but his contributions to the company's success were undeniable.
+              </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+          </div>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Team Section -->
+
+<!-- Adding the View More Button -->
+<section id="view_more">
+  <h2>Look into the experience of one of our Vault Dwellers</h2>
+  <button id="view_more_button">View More</button>
+</section>
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>For all inquiries, concerns, or partnership opportunities, feel free to reach out to Vault-Tec using the following contact information:</p>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>Address: Vault-Tec Headquarters <br> 101 Vault-Tec Way, Vault City, USA</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@vault-tec.com</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>1-888-4-VAULT-TEC</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-10">
+            <form action="contact.php" method="post" role="form" class="php-email-form" id="contact-form">
+
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <!-- New Field: Date Picker -->
+              <div class="form-group mt-3">
+                <input type="text" class="form-control datepicker" name="date" id="date" placeholder="Enter Date" required>
+              </div>
+              <!-- New Field: Password Strength Indicator -->
+              <div class="form-group mt-3">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required>
+                <div id="password-strength-indicator"></div>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button class="submit-btn-contact" type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </section><!-- End Contact Section -->
+
+      <section id="faq-section" class="faq-section">
+        <div class="wrapper">
+          <div class="faq-section-title">
+            <h2>Frequently asked questions</h2>
+          </div>
+
+
+          <div class="faq">
+            <button class="accordion-faq">
+              What is Vault-Tec?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>Vault-Tec Industries is a renowned corporation in the pre-war United States, specializing in the construction and operation of underground Vaults. These Vaults are designed to provide shelter and protection for select groups of citizens in the event of nuclear war or other catastrophic events. Established in the mid-21st century, Vault-Tec plays a pivotal role in the government's efforts to prepare for the possibility of nuclear conflict.  </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <button class="accordion-faq">
+              What are Vaults used for?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>Vaults serve as secure underground bunkers, equipped with advanced technology and resources to sustain their inhabitants for extended periods. Each Vault is designed to support a specific number of occupants and is equipped with facilities for food production, medical care, education, and recreation. Additionally, Vaults conduct various social experiments, with each Vault's purpose carefully planned by Vault-Tec's researchers and overseers.  </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <button class="accordion-faq">
+              How many Vaults are constructed?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>Vault-Tec has constructed a network of Vaults across the United States, with each Vault assigned a unique numerical designation. While the exact number of Vaults remains undisclosed, it is known that several dozen Vaults are built throughout the country, each with its own distinct design and purpose. </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <button class="accordion-faq">
+              What happens to the inhabitants of the Vaults?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>Following the Great War, which devastates the world and ushers in a post-apocalyptic era, many of the Vaults' inhabitants emerge to rebuild society. However, not all Vaults are successful in their mission, and some face challenges ranging from resource shortages to internal conflicts. The experiences of Vault dwellers vary greatly, with some communities thriving and others facing adversity in the harsh wasteland. </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <button class="accordion-faq">
+              Are there any surviving Vaults today?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>In the aftermath of the Great War, some Vaults remain operational, providing shelter and security for their inhabitants. However, many Vaults eventually fall into disrepair or are abandoned as their resources dwindle. Today, some Vaults still exist as inhabited communities, while others lie dormant, their secrets waiting to be uncovered by intrepid explorers.</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <button class="accordion-faq">
+              What is the legacy of Vault-Tec?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="panel">
+              <p>Vault-Tec's legacy is a complex and often controversial topic. While the corporation's Vaults save countless lives and contribute to humanity's survival in the aftermath of nuclear war, their social experiments and ethical implications spark debate and scrutiny. Nevertheless, Vault-Tec remains an indelible part of pre-war history, its Vaults standing as testament to both human ingenuity and the perils of unchecked ambition. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="survival-tips-container">
+
+        
+      </div>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Vault-Tec Corporation</h3>
+            <p>
+              United States <br><br>  
+              <strong>Address:</strong> Vault-Tec Headquarters, 101 Vault-Tec Way, Vault City, USA<br>
+              <strong>Phone:</strong> 1-888-4-VAULT-TEC<br>
+              <strong>Email:</strong> info@vault-tec.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Memorabilia</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#testimonials">Testimonials</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Vault Construction</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Scientific Research</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Emergency Preparedness Training
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Infrastructure Maintenance</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Public Relations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Community Management</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Get all the Vault-tec info while it's hot!</p>
+            <form action="#" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const user = JSON.parse(localStorage.getItem('loggedInUser'));
+      if (user) {
+        document.getElementById('userDisplayName').textContent = user.username;
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+          localStorage.removeItem('loggedInUser');
+          window.location.href = 'login.html';
+        });
+      }
+    });
+
+    
+  </script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
